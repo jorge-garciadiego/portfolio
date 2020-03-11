@@ -1,24 +1,104 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-body{
-   font-family: sans-serif;
-   margin: 0;
-   background-color: #222;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Oswald|Special+Elite&display=swap');
 
 *{
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
 }
 
+body{
+   margin: auto;
+   max-width: 95vw;
+   margin-bottom: 50px;
+   font-family: 'Special Elite', cursive;
+}
+
+/* The Header*/
+
+.header{
+   margin-top: 100px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   font-size: 4rem;
+   color: #0D0D0D;
+}
+
+.subtitle{
+   border-bottom: 14px solid #0D0D0D;
+}
+
+.contact{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+   margin-top: 10px;
+}
+
+/* Social icons/links */
+
+.social{
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin-top: 10px;
+}
+
+.social a{
+   display: inline-flex;
+   text-decoration: none;
+   width: 45px;
+   height: 45px;
+   background: #DED0F2;
+   color: #595956;
+   margin: 0 6px;
+   border-radius: 10%;
+   justify-content: center;
+   align-items: center;
+   transition: 0.4s;
+   font-size: 30px;
+}
+
+.social a i{
+   transition: 0.4s all;
+}
+
+#face:hover{
+   background: #3B5998;
+   color: #EDE9F2;
+}
+
+#instagram:hover{
+   background: #e4405f;
+   color: #EDE9F2;
+}
+
+#twitter:hover{
+   background: #55acee;
+   color: #EDE9F2;
+}
+
+#Linkedin:hover{
+   background: #2867b2;
+   color: #EDE9F2;
+}
+
+.social a:hover > i{
+   transform: rotatey(360deg);
+}
+
+/* This is the accordion main section which contains the core parts*/
 .accordion{
-   max-width: 600px;
-   background-color: #fbfbfb;
-   margin: 60px auto;
+   max-width: 90vw;
+   margin: 20px auto;
 }
 
 .accordion .heading{
-   background-color: #009688;
+   background-color: #22F2DD;
    padding: 12px 20px;
    position: relative;
    cursor: pointer;
@@ -30,10 +110,10 @@ body{
 }
 
 .accordion .heading h3{
-   font-size: 18px;
+   font-size: 1.5rem;
+   text-align: center;
    color: #ffffff;
    margin: 0;
-   padding-right: 50px;
 }
 
 .accordion .heading .fa{
@@ -55,15 +135,76 @@ body{
    transition: max-height .5s ease;
 }
 
-.accordion .body .text{
-   padding: 20px
+/*Style application to the Work Experience*/
+
+.jobBox{
+   margin-top: 5px;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   margin-left: 10px;
+   padding: 5px;
+   display: grid;
+   align-content: flex-start;
+   -webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+   box-shadow: 3px 10px 10px -5px #777;
+   border-radius: 0 10px;
+   line-height: 1.5rem;
+   
+   grid-row: span 3;
+   grid-column: span 3;
+   
 }
 
-.accordion .body .text p{
-   font-size: 14px;
-   color: #666;
-   margin: 0;
-   line-height: 22px;
 
+/* Grid Container*/
+.experience{
+   margin: auto;
+   max-width: 1150px;
+   margin-top: 10px;
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   grid-template-rows: repeat(8, 1fr);
+   justify-content: center;
+   grid-gap: 5px;
+   grid-auto-flow: dense;
 }
 
+/* Grid Elements */
+
+#imss{
+   grid-column: 4 / 10;
+   grid-row: 1 / 4;
+}
+
+#chalet{
+   grid-column: 1 / 6;
+   grid-row: 7 / 10;;
+}
+
+#fondika{
+   grid-column: 6 / 10;
+}
+
+/* Inside elements */
+
+.specsTitle{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.description::first-letter{
+   font-size: 75px;
+   padding: 5px;
+   float: left;
+   color: red;
+}
+
+.jobTitle, .jobPlace{
+   text-align: center;
+}
+
+.description{
+   text-align: start;
+}
