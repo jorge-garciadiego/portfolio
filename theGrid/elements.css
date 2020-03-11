@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Special+Elite&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   margin: auto;
+   max-width: 1200px;
+   margin-bottom: 50px;
+   font-family: 'Special Elite', cursive;
+}
+/* Structure design*/
+
+.header{
+   margin-top: 100px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   font-size: 4rem;
+}
+
+.subtitle{
+   border-bottom: 14px solid #000;
+}
+
+.contact{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+   margin-top: 10px;
+}
+
+.social{
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin-top: 10px;
+}
+
+.social a{
+   display: inline-flex;
+   text-decoration: none;
+   width: 45px;
+   height: 45px;
+   background: #DED0F2;
+   color: #595956;
+   margin: 0 6px;
+   border-radius: 10%;
+   justify-content: center;
+   align-items: center;
+   transition: 0.4s;
+   font-size: 30px;
+}
+
+.social a i{
+   transition: 0.4s all;
+}
+
+#face:hover{
+   background: #3B5998;
+   color: #EDE9F2;
+}
+
+#instagram:hover{
+   background: #e4405f;
+   color: #EDE9F2;
+}
+
+#twitter:hover{
+   background: #55acee;
+   color: #EDE9F2;
+}
+
+#Linkedin:hover{
+   background: #2867b2;
+   color: #EDE9F2;
+}
+
+.social a:hover > i{
+   transform: rotatey(360deg);
+}
+
+
+#workExperience{
+   text-align: center;
+   margin-top: 30px;
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   font-size: 4rem;
+}
+
+.jobBox{
+   padding: 5px;
+   display: grid;
+   align-content: flex-start;
+   -webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+   box-shadow: 3px 10px 10px -5px #777;
+   border-radius: 0 10px;
+   line-height: 1.5rem;
+   
+   
+}
+
+.experience{
+   margin: auto;
+   max-width: 1080px;
+   margin-top: 10px;
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   grid-template-rows: repeat(8, 1fr);
+   justify-content: center;
+   grid-gap: 15px;
+   grid-auto-flow: dense;
+
+   height: 0;
+   overflow: hidden;
+   transition: 0.5s;
+}
+
+.jobBox{
+   grid-row: span 3;
+   grid-column: span 3;
+}
+
+#imss{
+   grid-column: 4 / 10;
+   grid-row: 1 / 4;
+}
+
+#chalet{
+   grid-column: 1 / 6;
+   grid-row: 7 / 10;;
+}
+
+#fondika{
+   grid-column: 6 / 10;
+}
+
+
+.specsTitle{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.description::first-letter{
+   font-size: 75px;
+   padding: 5px;
+   float: left;
+   color: red;
+}
+
+.jobTitle, .jobPlace{
+   text-align: center;
+}
+
+
+#toogleExp{
+   display: none;
+   visibility: hidden;
+}
+
+#expLabel{
+   display: block;
+   text-align: center;
+   margin-top: 10px;
+   font-size: 1.5rem;
+   transition: all 0.2s;
+}
+
+#expLabel:hover{
+   color: red;
+}
+
+#expLabel::before{
+   content: "+";
+   font-size: 25px;
+   vertical-align: text-top;
+   display: inline-block;
+   width: 33px;
+   height: 33px;
+   margin: -5px 5px;
+   border-radius: 50%;
+   border: 3px solid;
+}
+
+.description{
+   text-align: start;
+}
+
+#toogleExp:checked ~ .experience
+{
+   height: auto;
+
+}
