@@ -13,12 +13,13 @@ body{
    max-width: 95vw;
    margin-bottom: 50px;
    font-family: 'Special Elite', cursive;
+   background: #D9D9D9;
 }
 
 /* The Header*/
 
 .header{
-   margin-top: 100px;
+   margin-top: 50px;
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -29,14 +30,20 @@ body{
 }
 
 .subtitle{
-   border-bottom: 14px solid #0D0D0D;
+   border-bottom: 14px solid #D95F5F;
 }
 
 .contact{
    display: flex;
    justify-content: space-around;
    list-style: none;
-   margin-top: 10px;
+   margin-top: 15px;
+   font-size: 18px;
+}
+
+.contact .icon{
+   font-size: 1.5rem;
+   margin-right: 5px;
 }
 
 /* Social icons/links */
@@ -45,7 +52,7 @@ body{
    display: flex;
    justify-content: center;
    list-style: none;
-   margin-top: 10px;
+   margin-top: 15px;
 }
 
 .social a{
@@ -53,14 +60,14 @@ body{
    text-decoration: none;
    width: 45px;
    height: 45px;
-   background: #DED0F2;
-   color: #595956;
+   /*background: #8C8B8B;*/   
+   color: #262626;
    margin: 0 6px;
-   border-radius: 10%;
+   border-radius: 50%;
    justify-content: center;
    align-items: center;
    transition: 0.4s;
-   font-size: 30px;
+   font-size: 35px;
 }
 
 .social a i{
@@ -95,10 +102,11 @@ body{
 .accordion{
    max-width: 90vw;
    margin: 20px auto;
+   background: #F2F2F2;
 }
 
 .accordion .heading{
-   background-color: #22F2DD;
+   background-color: #595153;
    padding: 12px 20px;
    position: relative;
    cursor: pointer;
@@ -145,11 +153,12 @@ body{
    padding: 5px;
    display: grid;
    align-content: flex-start;
-   -webkit-box-shadow: 0 10px 6px -6px #777;
-	-moz-box-shadow: 0 10px 6px -6px #777;
-   box-shadow: 3px 10px 10px -5px #777;
+   -webkit-box-shadow: 0 10px 6px -6px #595153;
+	-moz-box-shadow: 0 10px 6px -6px #595153;
+   box-shadow: 3px 10px 10px -5px #595153;
    border-radius: 0 10px;
    line-height: 1.5rem;
+   background: #F2F2F2;
    
    grid-row: span 3;
    grid-column: span 3;
@@ -198,7 +207,7 @@ body{
    font-size: 75px;
    padding: 5px;
    float: left;
-   color: red;
+   color: #F25244;
 }
 
 .jobTitle, .jobPlace{
